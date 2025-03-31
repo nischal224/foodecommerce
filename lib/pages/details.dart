@@ -15,7 +15,7 @@ class _DetailsState extends State<Details> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(top: 23.0, left: 20.0, right: 20),
+        margin: EdgeInsets.only(top: 45.0, left: 20.0, right: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

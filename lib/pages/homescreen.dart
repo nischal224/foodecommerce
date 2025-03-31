@@ -11,6 +11,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   bool icecream = false, burger = false, salad = false, pizza = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,17 +21,14 @@ class _HomeState extends State<Home> {
         child: Container(
           // color: Colors.amber,
           // height: MediaQuery.of(context).size.height * 2,
-          margin: EdgeInsets.only(top: 23, left: 20, bottom: 10),
+          margin: EdgeInsets.only(top: 45, left: 20, bottom: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "Welcome Nischal,",
-                    style: Appwidget.boldTextFeildStyle(),
-                  ),
+                  Text("Welcome", style: Appwidget.boldTextFeildStyle()),
                   Container(
                     margin: EdgeInsets.only(right: 20),
                     padding: EdgeInsets.all(8),
@@ -203,130 +201,129 @@ class _HomeState extends State<Home> {
   }
 
   Widget showItem() {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          GestureDetector(
-            onTap: () {
-              icecream = true;
-              burger = false;
-              salad = false;
-              pizza = false;
+    return
+    // scrollDirection: Axis.horizontal,
+    Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        GestureDetector(
+          onTap: () {
+            icecream = true;
+            burger = false;
+            salad = false;
+            pizza = false;
 
-              setState(() {});
-            },
-            child: Material(
-              elevation: 5.0,
-              borderRadius: BorderRadius.circular(10),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: icecream ? Color(0xFFD2691E) : Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                padding: EdgeInsets.all(8),
-                child: Image.asset(
-                  'images/icecream.png',
-                  color: icecream ? Colors.black : Colors.black,
-                  fit: BoxFit.cover,
-                  height: 40,
-                  width: 40,
-                ),
+            setState(() {});
+          },
+          child: Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+              decoration: BoxDecoration(
+                color: icecream ? Color(0xFFD2691E) : Colors.white,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              padding: EdgeInsets.all(8),
+              child: Image.asset(
+                'images/icecream.png',
+                color: icecream ? Colors.black : Colors.black,
+                fit: BoxFit.cover,
+                height: 40,
+                width: 40,
               ),
             ),
           ),
-          SizedBox(width: 15),
-          GestureDetector(
-            onTap: () {
-              icecream = false;
-              burger = false;
-              salad = false;
-              pizza = true;
+        ),
+        SizedBox(width: 15),
+        GestureDetector(
+          onTap: () {
+            icecream = false;
+            burger = false;
+            salad = false;
+            pizza = true;
 
-              setState(() {});
-            },
-            child: Material(
-              elevation: 5.0,
-              borderRadius: BorderRadius.circular(10),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: pizza ? Color(0xFF8B0000) : Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                padding: EdgeInsets.all(8),
-                child: Image.asset(
-                  'images/pizza.png',
-                  color: pizza ? Colors.black : Colors.black,
-                  fit: BoxFit.cover,
-                  height: 40,
-                  width: 40,
-                ),
+            setState(() {});
+          },
+          child: Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+              decoration: BoxDecoration(
+                color: pizza ? Color(0xFF8B0000) : Colors.white,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              padding: EdgeInsets.all(8),
+              child: Image.asset(
+                'images/pizza.png',
+                color: pizza ? Colors.black : Colors.black,
+                fit: BoxFit.cover,
+                height: 40,
+                width: 40,
               ),
             ),
           ),
-          SizedBox(width: 15),
+        ),
+        SizedBox(width: 15),
 
-          GestureDetector(
-            onTap: () {
-              icecream = false;
-              burger = true;
-              salad = false;
-              pizza = false;
+        GestureDetector(
+          onTap: () {
+            icecream = false;
+            burger = true;
+            salad = false;
+            pizza = false;
 
-              setState(() {});
-            },
-            child: Material(
-              elevation: 5.0,
-              borderRadius: BorderRadius.circular(10),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: burger ? Color(0xFFD2A560) : Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                padding: EdgeInsets.all(8),
-                child: Image.asset(
-                  'images/burger.png',
-                  color: burger ? Colors.black : Colors.black,
-                  fit: BoxFit.cover,
-                  height: 40,
-                  width: 40,
-                ),
+            setState(() {});
+          },
+          child: Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+              decoration: BoxDecoration(
+                color: burger ? Color(0xFFD2A560) : Colors.white,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              padding: EdgeInsets.all(8),
+              child: Image.asset(
+                'images/burger.png',
+                color: burger ? Colors.black : Colors.black,
+                fit: BoxFit.cover,
+                height: 40,
+                width: 40,
               ),
             ),
           ),
-          SizedBox(width: 15),
+        ),
+        SizedBox(width: 15),
 
-          GestureDetector(
-            onTap: () {
-              icecream = false;
-              burger = false;
-              salad = true;
-              pizza = false;
+        GestureDetector(
+          onTap: () {
+            icecream = false;
+            burger = false;
+            salad = true;
+            pizza = false;
 
-              setState(() {});
-            },
-            child: Material(
-              elevation: 5.0,
-              borderRadius: BorderRadius.circular(10),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: salad ? Color(0xFF8A2BE2) : Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                padding: EdgeInsets.all(8),
-                child: Image.asset(
-                  'images/salad.png',
-                  color: salad ? Colors.black : Colors.black,
-                  fit: BoxFit.cover,
-                  height: 40,
-                  width: 40,
-                ),
+            setState(() {});
+          },
+          child: Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+              decoration: BoxDecoration(
+                color: salad ? Color(0xFF8A2BE2) : Colors.white,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              padding: EdgeInsets.all(8),
+              child: Image.asset(
+                'images/salad.png',
+                color: salad ? Colors.black : Colors.black,
+                fit: BoxFit.cover,
+                height: 40,
+                width: 40,
               ),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

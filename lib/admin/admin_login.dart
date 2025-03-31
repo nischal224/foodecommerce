@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:food/widget/admin/home_admin.dart';
+import 'package:food/admin/home_admin.dart';
 
 class AdminLogin extends StatefulWidget {
   const AdminLogin({super.key});

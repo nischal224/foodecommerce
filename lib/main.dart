@@ -1,11 +1,9 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:food/pages/login.dart';
-import 'package:food/pages/onboard.dart';
-import 'package:food/widget/admin/admin_login.dart';
+import 'package:food/admin/home_admin.dart';
+
 import 'package:food/widget/app_constant.dart';
 
 void main() async {
@@ -41,8 +39,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'HungerHive',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home:
-          FirebaseAuth.instance.currentUser == null ? Onboard() : LoginScreen(),
+      home: HomeAdmin(),
+      // FirebaseAuth.instance.currentUser == null ? Onboard() : LoginScreen(),
     );
   }
 }
